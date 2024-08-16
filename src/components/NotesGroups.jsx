@@ -85,7 +85,7 @@ const NotesGroups = ({ groupId, setGroupId }) => {
       >
         +
       </div>
-
+        <div className="h-2"/>
       <Footer headerWidth={headerWidth}/>
     </div>
   );
