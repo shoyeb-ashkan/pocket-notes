@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import AddGroupForm from "./AddGroupForm";
 import { useSelector } from "react-redux";
 import { trimName } from "../utils/trimName";
+import Footer from "./Footer";
 
 const NotesGroups = ({ groupId, setGroupId }) => {
   const [headerWidth, setHeaderWidth] = useState(0);
@@ -78,12 +79,14 @@ const NotesGroups = ({ groupId, setGroupId }) => {
       <AddGroupForm isShown={isShown} setIsShown={setIsShown} />
 
       <div
-        className="fixed bottom-5 lg:h-20 lg:w-20 rounded-full lg:text-7xl md:h-14 md:w-14 md:text-6xl sm:h-12 sm:w-12 sm:text-4xl bg-[#16008B] flex justify-center items-center h-16 w-16 text-5xl hover:bg-[#3722AC] transform transition-colors delay-100 cursor-pointer"
+        className="fixed bottom-7 lg:h-20 lg:w-20 rounded-full lg:text-7xl md:h-14 md:w-14 md:text-6xl sm:h-12 sm:w-12 sm:text-4xl bg-[#16008B] flex justify-center items-center h-16 w-16 text-5xl hover:bg-[#3722AC] transform transition-colors delay-100 cursor-pointer"
         style={{ left: buttonposition }}
         onClick={() => setIsShown(true)}
       >
         +
       </div>
+
+      <Footer headerWidth={headerWidth}/>
     </div>
   );
 };
